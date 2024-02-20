@@ -10,7 +10,7 @@ import jakarta.enterprise.context.control.ActivateRequestContext;
 @RequestScoped
 @ActivateRequestContext
 public class DbSource {
-    static private final AtomicInteger counter = new AtomicInteger(3);
+    static private final AtomicInteger counter = new AtomicInteger(2);
     private boolean isAcquired = false;
 
     public void acquire() {

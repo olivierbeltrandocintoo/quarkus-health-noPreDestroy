@@ -5,11 +5,11 @@ import org.eclipse.microprofile.health.HealthCheckResponse;
 import org.eclipse.microprofile.health.HealthCheckResponseBuilder;
 import org.eclipse.microprofile.health.Liveness;
 
-import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 
 @Liveness
-@ApplicationScoped
+@RequestScoped
 class ReadinessAndLiveness implements HealthCheck {
     @Inject
     DbSource dbSource;
