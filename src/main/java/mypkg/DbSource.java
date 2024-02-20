@@ -5,10 +5,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import io.quarkus.logging.Log;
 import jakarta.annotation.PreDestroy;
 import jakarta.enterprise.context.RequestScoped;
-import jakarta.enterprise.context.control.ActivateRequestContext;
 
 @RequestScoped
-@ActivateRequestContext
 public class DbSource {
     static private final AtomicInteger counter = new AtomicInteger(2);
     private boolean isAcquired = false;
